@@ -12,10 +12,13 @@ const TodoList = ({todos,onDeleted}) => {
 
                 <TodoListItem {...itemProps}
                               onDeleted={() => onDeleted(id)}
+                              onToggleImportant={() => this.props.onToggleImportant(id)}
+                              onToggleDone={() => this.props.onToggleDone(id)}
                 />
             </li>
         );
     });
+
     return (
         <ul className="list-group todo-list">
             {elements}
